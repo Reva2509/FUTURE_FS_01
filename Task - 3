@@ -1,0 +1,550 @@
+<!doctype html>
+<html lang="en" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HotCup Cafe - Premium coffee and snacks in Tamil Nadu, India. A cozy spot for youngsters and everyone who loves great coffee.">
+  <meta name="keywords" content="cafe, coffee, Tamil Nadu, India, HotCup, snacks, beverages">
+  <title>HotCup Cafe | Premium Coffee &amp; More</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  <script src="/_sdk/element_sdk.js"></script>
+  <script src="/_sdk/data_sdk.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=DM+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+  <style>
+    html, body { height: 100%; margin: 0; }
+    .font-display { font-family: 'Playfair Display', serif; }
+    .font-body { font-family: 'DM Sans', sans-serif; }
+    .scroll-smooth { scroll-behavior: smooth; }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+    .animate-fade-up { animation: fadeUp 0.8s ease forwards; }
+    .animate-fade-up-delay { animation: fadeUp 0.8s ease 0.2s forwards; opacity: 0; }
+    .animate-fade-up-delay2 { animation: fadeUp 0.8s ease 0.4s forwards; opacity: 0; }
+    .animate-float { animation: float 3s ease-in-out infinite; }
+    .menu-card:hover { transform: translateY(-8px); }
+    .menu-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .nav-link { position: relative; }
+    .nav-link::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: currentColor; transition: width 0.3s ease; }
+    .nav-link:hover::after { width: 100%; }
+    .whatsapp-btn { position: fixed; bottom: 24px; right: 24px; z-index: 999; width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(37,211,102,0.4); transition: transform 0.3s ease; }
+    .whatsapp-btn:hover { transform: scale(1.1); }
+    .testimonial-card { transition: transform 0.3s ease; }
+    .testimonial-card:hover { transform: scale(1.02); }
+    .filter-btn.active { background: #2D1810; color: #fff; }
+  </style>
+  <style>body { box-sizing: border-box; }</style>
+ </head>
+ <body class="h-full font-body scroll-smooth overflow-auto" style="background: #FFF8F0;"><!-- Sticky Nav -->
+  <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300" style="background: rgba(255,248,240,0.95); backdrop-filter: blur(10px);">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16"><a href="#home" class="font-display text-2xl font-bold" style="color: #2D1810;">Hot<span style="color: #D4553A;">Cup</span></a>
+    <div class="hidden md:flex items-center gap-8"><a href="#home" class="nav-link text-sm font-medium" style="color: #2D1810;">Home</a> <a href="#about" class="nav-link text-sm font-medium" style="color: #2D1810;">About</a> <a href="#menu" class="nav-link text-sm font-medium" style="color: #2D1810;">Menu</a> <a href="#reviews" class="nav-link text-sm font-medium" style="color: #2D1810;">Reviews</a> <a href="#faq" class="nav-link text-sm font-medium" style="color: #2D1810;">FAQ</a> <a href="#contact" class="nav-link text-sm font-medium" style="color: #2D1810;">Contact</a>
+    </div><button id="mobile-toggle" class="md:hidden p-2" style="color: #2D1810;"><i data-lucide="menu" class="w-6 h-6"></i></button>
+   </div>
+   <div id="mobile-menu" class="hidden md:hidden px-4 pb-4 space-y-3"><a href="#home" class="block text-sm font-medium py-2" style="color: #2D1810;">Home</a> <a href="#about" class="block text-sm font-medium py-2" style="color: #2D1810;">About</a> <a href="#menu" class="block text-sm font-medium py-2" style="color: #2D1810;">Menu</a> <a href="#reviews" class="block text-sm font-medium py-2" style="color: #2D1810;">Reviews</a> <a href="#faq" class="block text-sm font-medium py-2" style="color: #2D1810;">FAQ</a> <a href="#contact" class="block text-sm font-medium py-2" style="color: #2D1810;">Contact</a>
+   </div>
+  </nav><!-- Hero -->
+  <section id="home" class="w-full pt-24 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden" style="min-height: 90%; display: flex; align-items: center;">
+   <div class="absolute inset-0 opacity-10" style="background: radial-gradient(circle at 70% 30%, #D4553A 0%, transparent 50%), radial-gradient(circle at 20% 80%, #8B4513 0%, transparent 40%);"></div>
+   <div class="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-12 items-center relative z-10">
+    <div>
+     <p class="animate-fade-up text-sm font-semibold tracking-widest uppercase mb-4" style="color: #D4553A;">Welcome to HotCup Cafe</p>
+     <h1 id="hero-headline" class="animate-fade-up font-display text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6" style="color: #2D1810;">Where Every Sip Tells a Story</h1>
+     <p id="hero-subtext" class="animate-fade-up-delay text-lg mb-8" style="color: #5C4033;">Handcrafted beverages, artisan snacks, and a vibe that feels like home. Your new favorite hangout in Tamil Nadu.</p>
+     <div class="animate-fade-up-delay2 flex flex-wrap gap-4"><a href="#menu" class="inline-flex items-center gap-2 px-8 py-3.5 rounded-full font-semibold text-white transition-all hover:shadow-lg hover:scale-105" style="background: #D4553A;">Explore Menu <i data-lucide="arrow-right" class="w-4 h-4"></i></a> <a href="#contact" class="inline-flex items-center gap-2 px-8 py-3.5 rounded-full font-semibold border-2 transition-all hover:scale-105" style="color: #2D1810; border-color: #2D1810;">Book a Table</a>
+     </div>
+     <div class="mt-10 flex items-center gap-8">
+      <div>
+       <span class="font-display text-3xl font-bold" style="color: #2D1810;">5K+</span>
+       <p class="text-sm" style="color: #5C4033;">Happy Customers</p>
+      </div>
+      <div class="w-px h-10" style="background: #D4553A33;"></div>
+      <div>
+       <span class="font-display text-3xl font-bold" style="color: #2D1810;">50+</span>
+       <p class="text-sm" style="color: #5C4033;">Menu Items</p>
+      </div>
+      <div class="w-px h-10" style="background: #D4553A33;"></div>
+      <div>
+       <span class="font-display text-3xl font-bold" style="color: #2D1810;">4.8</span>
+       <p class="text-sm" style="color: #5C4033;">⭐ Rating</p>
+      </div>
+     </div>
+    </div>
+    <div class="flex justify-center">
+     <div class="animate-float relative w-72 h-72 sm:w-96 sm:h-96 rounded-full flex items-center justify-center" style="background: linear-gradient(135deg, #D4553A22, #8B451322);"><span class="text-8xl sm:text-9xl">☕</span>
+      <div class="absolute -top-4 -right-4 w-16 h-16 rounded-full flex items-center justify-center text-2xl" style="background: #FFF;">
+       🧁
+      </div>
+      <div class="absolute -bottom-2 -left-4 w-14 h-14 rounded-full flex items-center justify-center text-2xl" style="background: #FFF;">
+       🍪
+      </div>
+     </div>
+    </div>
+   </div>
+  </section><!-- USP -->
+  <section class="w-full py-16 px-4 sm:px-6 lg:px-8" style="background: #2D1810;">
+   <div class="max-w-7xl mx-auto grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+    <div class="text-center">
+     <div class="w-14 h-14 mx-auto mb-4 rounded-xl flex items-center justify-center text-2xl" style="background: #D4553A33;">
+      🌿
+     </div>
+     <h3 class="font-semibold text-white mb-2">100% Organic</h3>
+     <p class="text-sm" style="color: #BFA68F;">Freshly sourced beans from premium estates</p>
+    </div>
+    <div class="text-center">
+     <div class="w-14 h-14 mx-auto mb-4 rounded-xl flex items-center justify-center text-2xl" style="background: #D4553A33;">
+      ⚡
+     </div>
+     <h3 class="font-semibold text-white mb-2">Free Wi-Fi</h3>
+     <p class="text-sm" style="color: #BFA68F;">High-speed internet for work &amp; chill</p>
+    </div>
+    <div class="text-center">
+     <div class="w-14 h-14 mx-auto mb-4 rounded-xl flex items-center justify-center text-2xl" style="background: #D4553A33;">
+      🎵
+     </div>
+     <h3 class="font-semibold text-white mb-2">Live Music</h3>
+     <p class="text-sm" style="color: #BFA68F;">Weekend acoustic sessions &amp; open mics</p>
+    </div>
+    <div class="text-center">
+     <div class="w-14 h-14 mx-auto mb-4 rounded-xl flex items-center justify-center text-2xl" style="background: #D4553A33;">
+      📸
+     </div>
+     <h3 class="font-semibold text-white mb-2">Insta-Worthy</h3>
+     <p class="text-sm" style="color: #BFA68F;">Aesthetic interiors perfect for content</p>
+    </div>
+   </div>
+  </section><!-- About -->
+  <section id="about" class="w-full py-20 px-4 sm:px-6 lg:px-8">
+   <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+    <div class="relative">
+     <div class="w-full aspect-square rounded-3xl flex items-center justify-center" style="background: linear-gradient(135deg, #2D1810, #5C4033);"><span class="text-9xl">🏪</span>
+     </div>
+     <div class="absolute -bottom-6 -right-6 p-5 rounded-2xl shadow-xl" style="background: #FFF;">
+      <p class="font-display text-2xl font-bold" style="color: #D4553A;">Est. 2020</p>
+      <p class="text-sm" style="color: #5C4033;">Serving with love</p>
+     </div>
+    </div>
+    <div>
+     <p class="text-sm font-semibold tracking-widest uppercase mb-3" style="color: #D4553A;">Our Story</p>
+     <h2 id="about-title" class="font-display text-3xl sm:text-4xl font-bold mb-6" style="color: #2D1810;">More Than Just a Cafe — It's a Community</h2>
+     <p id="about-text" class="text-lg leading-relaxed mb-6" style="color: #5C4033;">Born from a passion for great coffee and meaningful connections, HotCup Cafe has grown into Tamil Nadu's favorite hangout spot. We believe every cup should be an experience — crafted with care, served with warmth, and enjoyed in a space that inspires.</p>
+     <div class="grid grid-cols-2 gap-4 mb-8">
+      <div class="p-4 rounded-xl" style="background: #FFF;">
+       <i data-lucide="leaf" class="w-5 h-5 mb-2" style="color: #D4553A;"></i>
+       <p class="text-sm font-medium" style="color: #2D1810;">Sustainable sourcing</p>
+      </div>
+      <div class="p-4 rounded-xl" style="background: #FFF;">
+       <i data-lucide="heart" class="w-5 h-5 mb-2" style="color: #D4553A;"></i>
+       <p class="text-sm font-medium" style="color: #2D1810;">Made with love</p>
+      </div>
+      <div class="p-4 rounded-xl" style="background: #FFF;">
+       <i data-lucide="users" class="w-5 h-5 mb-2" style="color: #D4553A;"></i>
+       <p class="text-sm font-medium" style="color: #2D1810;">Community first</p>
+      </div>
+      <div class="p-4 rounded-xl" style="background: #FFF;">
+       <i data-lucide="award" class="w-5 h-5 mb-2" style="color: #D4553A;"></i>
+       <p class="text-sm font-medium" style="color: #2D1810;">Award-winning blends</p>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section><!-- Team -->
+  <section class="w-full py-16 px-4 sm:px-6 lg:px-8" style="background: #FFF;">
+   <div class="max-w-7xl mx-auto text-center mb-12">
+    <p class="text-sm font-semibold tracking-widest uppercase mb-3" style="color: #D4553A;">Meet the Team</p>
+    <h2 class="font-display text-3xl font-bold" style="color: #2D1810;">The People Behind Your Perfect Cup</h2>
+   </div>
+   <div class="max-w-4xl mx-auto grid sm:grid-cols-3 gap-8">
+    <div class="text-center">
+     <div class="w-24 h-24 mx-auto mb-4 rounded-full flex items-center justify-center text-4xl" style="background: #FFF8F0;">
+      👨‍🍳
+     </div>
+     <h4 class="font-semibold" style="color: #2D1810;">Arjun Kumar</h4>
+     <p class="text-sm" style="color: #D4553A;">Founder &amp; Head Barista</p>
+    </div>
+    <div class="text-center">
+     <div class="w-24 h-24 mx-auto mb-4 rounded-full flex items-center justify-center text-4xl" style="background: #FFF8F0;">
+      👩‍🍳
+     </div>
+     <h4 class="font-semibold" style="color: #2D1810;">Priya Sharma</h4>
+     <p class="text-sm" style="color: #D4553A;">Pastry Chef</p>
+    </div>
+    <div class="text-center">
+     <div class="w-24 h-24 mx-auto mb-4 rounded-full flex items-center justify-center text-4xl" style="background: #FFF8F0;">
+      🧑‍💼
+     </div>
+     <h4 class="font-semibold" style="color: #2D1810;">Vikram Raj</h4>
+     <p class="text-sm" style="color: #D4553A;">Operations Manager</p>
+    </div>
+   </div>
+  </section><!-- Menu -->
+  <section id="menu" class="w-full py-20 px-4 sm:px-6 lg:px-8">
+   <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-12">
+     <p class="text-sm font-semibold tracking-widest uppercase mb-3" style="color: #D4553A;">Our Menu</p>
+     <h2 class="font-display text-3xl sm:text-4xl font-bold" style="color: #2D1810;">Crafted for Every Mood</h2>
+    </div>
+    <div class="flex flex-wrap justify-center gap-3 mb-10" id="filter-btns"><button class="filter-btn active px-5 py-2 rounded-full text-sm font-medium transition-all" data-filter="all">All</button> <button class="filter-btn px-5 py-2 rounded-full text-sm font-medium transition-all" style="background: #FFF; color: #2D1810;" data-filter="coffee">Coffee</button> <button class="filter-btn px-5 py-2 rounded-full text-sm font-medium transition-all" style="background: #FFF; color: #2D1810;" data-filter="tea">Tea</button> <button class="filter-btn px-5 py-2 rounded-full text-sm font-medium transition-all" style="background: #FFF; color: #2D1810;" data-filter="snacks">Snacks</button> <button class="filter-btn px-5 py-2 rounded-full text-sm font-medium transition-all" style="background: #FFF; color: #2D1810;" data-filter="desserts">Desserts</button>
+    </div>
+    <div id="menu-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    </div>
+   </div>
+  </section><!-- Reviews -->
+  <section id="reviews" class="w-full py-20 px-4 sm:px-6 lg:px-8" style="background: #2D1810;">
+   <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-12">
+     <p class="text-sm font-semibold tracking-widest uppercase mb-3" style="color: #D4553A;">Testimonials</p>
+     <h2 class="font-display text-3xl sm:text-4xl font-bold text-white">What Our Customers Say</h2>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+     <div class="testimonial-card p-6 rounded-2xl" style="background: #3D2820;">
+      <div class="flex items-center gap-1 mb-3">
+       <span style="color: #FFD700;">⭐⭐⭐⭐⭐</span>
+      </div>
+      <p class="mb-4 text-sm leading-relaxed" style="color: #BFA68F;">"Best cappuccino in town! The ambiance is perfect for both study sessions and casual hangouts. Love the vibe!"</p>
+      <div class="flex items-center gap-3">
+       <div class="w-9 h-9 rounded-full flex items-center justify-center text-sm" style="background: #D4553A33; color: #D4553A;">
+        D
+       </div>
+       <div>
+        <p class="text-sm font-medium text-white">Deepika R.</p>
+        <p class="text-xs" style="color: #BFA68F;">Regular since 2021</p>
+       </div>
+      </div>
+     </div>
+     <div class="testimonial-card p-6 rounded-2xl" style="background: #3D2820;">
+      <div class="flex items-center gap-1 mb-3">
+       <span style="color: #FFD700;">⭐⭐⭐⭐⭐</span>
+      </div>
+      <p class="mb-4 text-sm leading-relaxed" style="color: #BFA68F;">"The filter coffee here reminds me of my grandmother's recipe. Authentic taste with a modern twist. Must visit!"</p>
+      <div class="flex items-center gap-3">
+       <div class="w-9 h-9 rounded-full flex items-center justify-center text-sm" style="background: #D4553A33; color: #D4553A;">
+        K
+       </div>
+       <div>
+        <p class="text-sm font-medium text-white">Karthik S.</p>
+        <p class="text-xs" style="color: #BFA68F;">Coffee enthusiast</p>
+       </div>
+      </div>
+     </div>
+     <div class="testimonial-card p-6 rounded-2xl" style="background: #3D2820;">
+      <div class="flex items-center gap-1 mb-3">
+       <span style="color: #FFD700;">⭐⭐⭐⭐⭐</span>
+      </div>
+      <p class="mb-4 text-sm leading-relaxed" style="color: #BFA68F;">"Perfect spot for freelancers! Great Wi-Fi, comfy seating, and the cold brew is absolutely divine. My daily go-to place."</p>
+      <div class="flex items-center gap-3">
+       <div class="w-9 h-9 rounded-full flex items-center justify-center text-sm" style="background: #D4553A33; color: #D4553A;">
+        A
+       </div>
+       <div>
+        <p class="text-sm font-medium text-white">Aishwarya M.</p>
+        <p class="text-xs" style="color: #BFA68F;">Freelancer</p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section><!-- FAQ -->
+  <section id="faq" class="w-full py-20 px-4 sm:px-6 lg:px-8">
+   <div class="max-w-3xl mx-auto">
+    <div class="text-center mb-12">
+     <p class="text-sm font-semibold tracking-widest uppercase mb-3" style="color: #D4553A;">FAQ</p>
+     <h2 class="font-display text-3xl font-bold" style="color: #2D1810;">Got Questions?</h2>
+    </div>
+    <div id="faq-container" class="space-y-3"></div>
+   </div>
+  </section><!-- Contact -->
+  <section id="contact" class="w-full py-20 px-4 sm:px-6 lg:px-8" style="background: #FFF;">
+   <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-12">
+     <p class="text-sm font-semibold tracking-widest uppercase mb-3" style="color: #D4553A;">Get in Touch</p>
+     <h2 class="font-display text-3xl sm:text-4xl font-bold" style="color: #2D1810;">Visit Us or Drop a Message</h2>
+    </div>
+    <div class="grid lg:grid-cols-2 gap-12">
+     <div>
+      <form id="contact-form" class="space-y-5">
+       <div>
+        <label for="c-name" class="block text-sm font-medium mb-1.5" style="color: #2D1810;">Your Name</label><input id="c-name" type="text" required class="w-full px-4 py-3 rounded-xl border text-sm focus:outline-none focus:ring-2" style="border-color: #E8D5C4; focus:ring-color: #D4553A;" placeholder="John Doe">
+       </div>
+       <div>
+        <label for="c-email" class="block text-sm font-medium mb-1.5" style="color: #2D1810;">Email</label><input id="c-email" type="email" required class="w-full px-4 py-3 rounded-xl border text-sm focus:outline-none focus:ring-2" style="border-color: #E8D5C4;" placeholder="john@example.com">
+       </div>
+       <div>
+        <label for="c-phone" class="block text-sm font-medium mb-1.5" style="color: #2D1810;">Phone</label><input id="c-phone" type="tel" class="w-full px-4 py-3 rounded-xl border text-sm focus:outline-none focus:ring-2" style="border-color: #E8D5C4;" placeholder="+91 98765 43210">
+       </div>
+       <div>
+        <label for="c-msg" class="block text-sm font-medium mb-1.5" style="color: #2D1810;">Message</label><textarea id="c-msg" rows="4" required class="w-full px-4 py-3 rounded-xl border text-sm focus:outline-none focus:ring-2 resize-none" style="border-color: #E8D5C4;" placeholder="Tell us what you need..."></textarea>
+       </div><button type="submit" id="contact-submit" class="w-full py-3.5 rounded-xl font-semibold text-white transition-all hover:shadow-lg hover:scale-[1.02]" style="background: #D4553A;">Send Message</button>
+       <div id="form-status" class="hidden text-center text-sm py-2 rounded-lg"></div>
+      </form>
+     </div>
+     <div class="space-y-6">
+      <div class="p-6 rounded-2xl" style="background: #FFF8F0;">
+       <div class="flex items-start gap-4 mb-5">
+        <i data-lucide="map-pin" class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #D4553A;"></i>
+        <div>
+         <h4 class="font-semibold text-sm" style="color: #2D1810;">Location</h4>
+         <p class="text-sm" style="color: #5C4033;">123, Anna Nagar Main Road, Chennai, Tamil Nadu 600040</p>
+        </div>
+       </div>
+       <div class="flex items-start gap-4 mb-5">
+        <i data-lucide="phone" class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #D4553A;"></i>
+        <div>
+         <h4 class="font-semibold text-sm" style="color: #2D1810;">Phone</h4>
+         <p id="display-phone" class="text-sm" style="color: #5C4033;">+91 98765 43210</p>
+        </div>
+       </div>
+       <div class="flex items-start gap-4 mb-5">
+        <i data-lucide="mail" class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #D4553A;"></i>
+        <div>
+         <h4 class="font-semibold text-sm" style="color: #2D1810;">Email</h4>
+         <p id="display-email" class="text-sm" style="color: #5C4033;">hello@hotcupcafe.in</p>
+        </div>
+       </div>
+       <div class="flex items-start gap-4">
+        <i data-lucide="clock" class="w-5 h-5 mt-0.5 flex-shrink-0" style="color: #D4553A;"></i>
+        <div>
+         <h4 class="font-semibold text-sm" style="color: #2D1810;">Hours</h4>
+         <p id="display-hours" class="text-sm" style="color: #5C4033;">Mon - Sun: 7:00 AM – 11:00 PM</p>
+        </div>
+       </div>
+      </div>
+      <div class="rounded-2xl overflow-hidden h-56" style="background: #E8D5C4;"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.0088401283836!2d80.2088!3d13.0827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTPCsDA0JzU3LjciTiA4MMKwMTInMzEuNyJF!5e0!3m2!1sen!2sin!4v1" width="100%" height="100%" style="border:0;" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <div class="flex items-center gap-4"><a href="#" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full flex items-center justify-center transition-all hover:scale-110" style="background: #FFF8F0; color: #D4553A;"><i data-lucide="instagram" class="w-5 h-5"></i></a> <a href="#" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full flex items-center justify-center transition-all hover:scale-110" style="background: #FFF8F0; color: #D4553A;"><i data-lucide="facebook" class="w-5 h-5"></i></a> <a href="#" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full flex items-center justify-center transition-all hover:scale-110" style="background: #FFF8F0; color: #D4553A;"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section><!-- Newsletter -->
+  <section class="w-full py-16 px-4 sm:px-6 lg:px-8" style="background: linear-gradient(135deg, #D4553A, #8B4513);">
+   <div class="max-w-2xl mx-auto text-center">
+    <h2 class="font-display text-3xl font-bold text-white mb-3">Stay in the Loop ☕</h2>
+    <p class="text-sm mb-8" style="color: #FFD4C4;">Get exclusive offers, new menu updates, and event invites straight to your inbox.</p>
+    <form id="newsletter-form" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto"><input type="email" required placeholder="your@email.com" class="flex-1 px-5 py-3 rounded-full text-sm focus:outline-none" style="background: rgba(255,255,255,0.95);"> <button type="submit" class="px-6 py-3 rounded-full font-semibold text-sm transition-all hover:scale-105" style="background: #2D1810; color: #FFF;">Subscribe</button>
+    </form>
+    <div id="newsletter-status" class="hidden text-sm mt-3 text-white"></div>
+   </div>
+  </section><!-- Footer -->
+  <footer class="w-full py-12 px-4 sm:px-6 lg:px-8" style="background: #1A0E0A;">
+   <div class="max-w-7xl mx-auto grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+    <div>
+     <p class="font-display text-xl font-bold text-white mb-3">Hot<span style="color: #D4553A;">Cup</span></p>
+     <p class="text-sm" style="color: #BFA68F;">Crafting moments, one cup at a time. Tamil Nadu's favorite cafe destination.</p>
+    </div>
+    <div>
+     <h4 class="font-semibold text-white mb-3 text-sm">Quick Links</h4>
+     <div class="space-y-2">
+      <a href="#home" class="block text-sm hover:underline" style="color: #BFA68F;">Home</a><a href="#about" class="block text-sm hover:underline" style="color: #BFA68F;">About</a><a href="#menu" class="block text-sm hover:underline" style="color: #BFA68F;">Menu</a><a href="#contact" class="block text-sm hover:underline" style="color: #BFA68F;">Contact</a>
+     </div>
+    </div>
+    <div>
+     <h4 class="font-semibold text-white mb-3 text-sm">Hours</h4>
+     <p class="text-sm" style="color: #BFA68F;">Monday – Sunday</p>
+     <p class="text-sm" style="color: #BFA68F;">7:00 AM – 11:00 PM</p>
+    </div>
+    <div>
+     <h4 class="font-semibold text-white mb-3 text-sm">Contact</h4>
+     <p class="text-sm" style="color: #BFA68F;">+91 98765 43210</p>
+     <p class="text-sm" style="color: #BFA68F;">hello@hotcupcafe.in</p>
+     <p class="text-sm" style="color: #BFA68F;">Chennai, Tamil Nadu</p>
+    </div>
+   </div>
+   <div class="max-w-7xl mx-auto pt-6 border-t text-center" style="border-color: #3D2820;">
+    <p class="text-xs" style="color: #BFA68F;">© 2024 HotCup Cafe. All rights reserved. Made with ❤️ in Tamil Nadu.</p>
+   </div>
+  </footer><!-- WhatsApp Button --> <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" class="whatsapp-btn" style="background: #25D366; color: #FFF;">
+   <svg width="28" height="28" viewbox="0 0 24 24" fill="currentColor">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+   </svg></a>
+  <script>
+// Menu Data
+const menuItems = [
+  { name: "Classic Cappuccino", price: "₹180", category: "coffee", emoji: "☕", desc: "Rich espresso with velvety steamed milk" },
+  { name: "Cold Brew", price: "₹200", category: "coffee", emoji: "🧊", desc: "Slow-steeped 18-hour cold brew" },
+  { name: "Caramel Latte", price: "₹220", category: "coffee", emoji: "🍯", desc: "Smooth latte with house-made caramel" },
+  { name: "Filter Coffee", price: "₹80", category: "coffee", emoji: "☕", desc: "Traditional South Indian filter kaapi" },
+  { name: "Masala Chai", price: "₹60", category: "tea", emoji: "🫖", desc: "Spiced milk tea with cardamom & ginger" },
+  { name: "Matcha Latte", price: "₹250", category: "tea", emoji: "🍵", desc: "Ceremonial grade matcha with oat milk" },
+  { name: "Iced Peach Tea", price: "₹150", category: "tea", emoji: "🍑", desc: "Refreshing peach-infused iced tea" },
+  { name: "Paneer Sandwich", price: "₹160", category: "snacks", emoji: "🥪", desc: "Grilled paneer with mint chutney" },
+  { name: "Loaded Nachos", price: "₹190", category: "snacks", emoji: "🧀", desc: "Crispy nachos with cheese & salsa" },
+  { name: "Veg Club Sandwich", price: "₹180", category: "snacks", emoji: "🥙", desc: "Triple-decker with fresh veggies" },
+  { name: "Chocolate Brownie", price: "₹150", category: "desserts", emoji: "🍫", desc: "Warm fudgy brownie with ice cream" },
+  { name: "Tiramisu", price: "₹280", category: "desserts", emoji: "🍰", desc: "Classic Italian coffee-flavored layers" },
+];
+
+const faqData = [
+  { q: "Do you offer vegan options?", a: "Yes! We have oat milk, almond milk, and several vegan food items on our menu." },
+  { q: "Is there parking available?", a: "Yes, we have free parking for both two-wheelers and cars right next to the cafe." },
+  { q: "Can I book the cafe for private events?", a: "Absolutely! We offer private event bookings for groups of 20-50 people. Contact us for details." },
+  { q: "Do you have a loyalty program?", a: "Yes! Every 10th coffee is free. Ask our staff about our HotCup Rewards card." },
+  { q: "Is Wi-Fi free for all customers?", a: "Yes, high-speed Wi-Fi is complimentary for all customers with no time limit." },
+];
+
+// Render Menu
+function renderMenu(filter = 'all') {
+  const grid = document.getElementById('menu-grid');
+  const filtered = filter === 'all' ? menuItems : menuItems.filter(i => i.category === filter);
+  grid.innerHTML = filtered.map(item => `
+    <div class="menu-card p-6 rounded-2xl" style="background: #FFF; box-shadow: 0 4px 20px rgba(45,24,16,0.06);">
+      <div class="flex items-start justify-between mb-3">
+        <span class="text-4xl">${item.emoji}</span>
+        <span class="px-3 py-1 rounded-full text-xs font-semibold" style="background: #D4553A15; color: #D4553A;">${item.price}</span>
+      </div>
+      <h3 class="font-semibold mb-1" style="color: #2D1810;">${item.name}</h3>
+      <p class="text-sm" style="color: #5C4033;">${item.desc}</p>
+    </div>
+  `).join('');
+}
+
+// Render FAQ
+function renderFAQ() {
+  const container = document.getElementById('faq-container');
+  container.innerHTML = faqData.map((item, i) => `
+    <div class="faq-item rounded-xl overflow-hidden" style="background: #FFF;">
+      <button onclick="toggleFAQ(${i})" class="w-full flex items-center justify-between p-5 text-left">
+        <span class="font-medium text-sm" style="color: #2D1810;">${item.q}</span>
+        <i data-lucide="chevron-down" class="w-4 h-4 flex-shrink-0 transition-transform faq-icon-${i}" style="color: #D4553A;"></i>
+      </button>
+      <div id="faq-answer-${i}" class="hidden px-5 pb-5">
+        <p class="text-sm" style="color: #5C4033;">${item.a}</p>
+      </div>
+    </div>
+  `).join('');
+  lucide.createIcons();
+}
+
+function toggleFAQ(i) {
+  const answer = document.getElementById(`faq-answer-${i}`);
+  answer.classList.toggle('hidden');
+}
+
+// Filter buttons
+document.getElementById('filter-btns').addEventListener('click', (e) => {
+  if (e.target.classList.contains('filter-btn')) {
+    document.querySelectorAll('.filter-btn').forEach(b => { b.classList.remove('active'); b.style.background = '#FFF'; b.style.color = '#2D1810'; });
+    e.target.classList.add('active');
+    e.target.style.background = '#2D1810';
+    e.target.style.color = '#FFF';
+    renderMenu(e.target.dataset.filter);
+  }
+});
+
+// Mobile menu
+document.getElementById('mobile-toggle').addEventListener('click', () => {
+  document.getElementById('mobile-menu').classList.toggle('hidden');
+});
+document.querySelectorAll('#mobile-menu a').forEach(a => a.addEventListener('click', () => document.getElementById('mobile-menu').classList.add('hidden')));
+
+// Contact Form
+document.getElementById('contact-form').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const btn = document.getElementById('contact-submit');
+  const status = document.getElementById('form-status');
+  btn.disabled = true; btn.textContent = 'Sending...';
+  const result = await window.dataSdk.create({
+    name: document.getElementById('c-name').value,
+    email: document.getElementById('c-email').value,
+    phone: document.getElementById('c-phone').value || '',
+    message: document.getElementById('c-msg').value,
+    type: 'contact',
+    submitted_at: new Date().toISOString()
+  });
+  btn.disabled = false; btn.textContent = 'Send Message';
+  status.classList.remove('hidden');
+  if (result.isOk) {
+    status.textContent = '✅ Message sent successfully! We\'ll get back to you soon.';
+    status.style.color = '#16a34a'; status.style.background = '#f0fdf4';
+    e.target.reset();
+  } else {
+    status.textContent = '❌ Something went wrong. Please try again.';
+    status.style.color = '#dc2626'; status.style.background = '#fef2f2';
+  }
+  setTimeout(() => status.classList.add('hidden'), 4000);
+});
+
+// Newsletter
+document.getElementById('newsletter-form').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const status = document.getElementById('newsletter-status');
+  const email = e.target.querySelector('input').value;
+  const result = await window.dataSdk.create({ name: '', email, phone: '', message: '', type: 'newsletter', submitted_at: new Date().toISOString() });
+  status.classList.remove('hidden');
+  status.textContent = result.isOk ? '🎉 Subscribed! Welcome to the HotCup family.' : 'Something went wrong. Try again.';
+  if (result.isOk) e.target.reset();
+  setTimeout(() => status.classList.add('hidden'), 4000);
+});
+
+// Init
+renderMenu();
+renderFAQ();
+lucide.createIcons();
+
+// Data SDK init
+const dataHandler = { onDataChanged(data) {} };
+window.dataSdk.init(dataHandler);
+
+// Element SDK
+const defaultConfig = {
+  hero_headline: "Where Every Sip Tells a Story",
+  hero_subtext: "Handcrafted beverages, artisan snacks, and a vibe that feels like home. Your new favorite hangout in Tamil Nadu.",
+  about_title: "More Than Just a Cafe — It's a Community",
+  about_text: "Born from a passion for great coffee and meaningful connections, HotCup Cafe has grown into Tamil Nadu's favorite hangout spot. We believe every cup should be an experience — crafted with care, served with warmth, and enjoyed in a space that inspires.",
+  contact_phone: "+91 98765 43210",
+  contact_email: "hello@hotcupcafe.in",
+  business_hours: "Mon - Sun: 7:00 AM – 11:00 PM",
+  background_color: "#FFF8F0",
+  surface_color: "#FFFFFF",
+  text_color: "#2D1810",
+  primary_action_color: "#D4553A",
+  secondary_action_color: "#5C4033",
+  font_family: "DM Sans",
+  font_size: 16
+};
+
+window.elementSdk.init({
+  defaultConfig,
+  onConfigChange: async (config) => {
+    const c = { ...defaultConfig, ...config };
+    document.getElementById('hero-headline').textContent = c.hero_headline;
+    document.getElementById('hero-subtext').textContent = c.hero_subtext;
+    document.getElementById('about-title').textContent = c.about_title;
+    document.getElementById('about-text').textContent = c.about_text;
+    document.getElementById('display-phone').textContent = c.contact_phone;
+    document.getElementById('display-email').textContent = c.contact_email;
+    document.getElementById('display-hours').textContent = c.business_hours;
+    document.body.style.background = c.background_color;
+    document.querySelectorAll('.font-body').forEach(el => el.style.fontFamily = `${c.font_family}, sans-serif`);
+  },
+  mapToCapabilities: (config) => {
+    const c = { ...defaultConfig, ...config };
+    return {
+      recolorables: [
+        { get: () => c.background_color, set: (v) => window.elementSdk.setConfig({ background_color: v }) },
+        { get: () => c.surface_color, set: (v) => window.elementSdk.setConfig({ surface_color: v }) },
+        { get: () => c.text_color, set: (v) => window.elementSdk.setConfig({ text_color: v }) },
+        { get: () => c.primary_action_color, set: (v) => window.elementSdk.setConfig({ primary_action_color: v }) },
+        { get: () => c.secondary_action_color, set: (v) => window.elementSdk.setConfig({ secondary_action_color: v }) },
+      ],
+      borderables: [],
+      fontEditable: { get: () => c.font_family, set: (v) => window.elementSdk.setConfig({ font_family: v }) },
+      fontSizeable: { get: () => c.font_size, set: (v) => window.elementSdk.setConfig({ font_size: v }) }
+    };
+  },
+  mapToEditPanelValues: (config) => {
+    const c = { ...defaultConfig, ...config };
+    return new Map([
+      ["hero_headline", c.hero_headline],
+      ["hero_subtext", c.hero_subtext],
+      ["about_title", c.about_title],
+      ["about_text", c.about_text],
+      ["contact_phone", c.contact_phone],
+      ["contact_email", c.contact_email],
+      ["business_hours", c.business_hours]
+    ]);
+  }
+});
+</script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a03aee87d8944424',t:'MTc4MDExNDY3Mw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
